@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Edit Event</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style/output.css">
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="../js/script.js" defer></script>
+    </head>
+    <body class="h-screen flex flex-col bg-[#101010] text-white font-medium font-sans">
+        <header class="w-full flex gap-5 items-center justify-between bg-[#121212] portrait:bg-transparent portrait:shadow-none shadow-b-md rounded-b-xl">
+            <span class="relative flex items-center gap-1 p-5 hover:scale-110 hover:text-apple-action duration-300
+            font-light">
+                <a class="absolute inset-0 w-full h-full z-10" href="today.html"></a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                </svg>
+                <span class="hidden lg:block">Back</span>             
+            </span>
+            <span class="font-light p-5 mr-auto">New event</span>
+        </header>
+        <main class="relative w-full flex flex-col gap-5 items-center h-full p-5 overflow-y-scroll">
+            <div class="flex flex-col lg:flex-row-reverse lg:justify-between gap-3 lg:gap-3 w-full">
+                <div class="flex flex-col md:flex-row gap-2 md:gap-5 w-full lg:max-w-fit">
+                    <div class="flex flex-col gap-2">
+                        <span class="pl-5 hidden lg:block">Date</span>
+                        <div class="flex justify-start gap-1 items-center">
+                            <select class="form-select rounded-xl bg-[#202020] border-none">
+                                <option>1999</option>
+                            </select>
+                            -
+                            <select class="form-select rounded-xl bg-[#202020] border-none">
+                                <option>January</option>
+                            </select>
+                            -
+                            <select class="form-select rounded-xl bg-[#202020] border-none">
+                                <option>01</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="pl-5 hidden lg:block">Time</span>
+                        <div class="flex justify-start gap-1 items-center">
+                            <select class="form-select rounded-xl bg-[#202020] border-none">
+                                <option>12pm</option>
+                            </select>
+                            :
+                            <select class="form-select rounded-xl bg-[#202020] border-none">
+                                <option>32m</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 w-full lg:max-w-lg">
+                    <span class="pl-5">Title</span>
+                    <input placeholder="Untitled" class="form-input rounded-xl bg-[#202020] border-none">
+                </div>
+            </div>
+            <div class="flex flex-col gap-2 w-full h-full">
+                <span class="pl-5">Description</span>
+                <textarea placeholder="No description" class="form-textarea min-h-[12rem] h-full rounded-xl bg-[#202020] border-none resize-none"></textarea>
+            </div>
+            <div class="flex items-center gap-2 w-full">
+                <span class="pl-5">Notify</span>
+                <select class="form-select rounded-xl bg-[#202020] border-none">
+                    <option>3</option>
+                </select>
+                <span>hour(s) before</span>
+            </div>
+            <div class="w-full pl-5 flex flex-row gap-2 items-center">
+                <span>Turn on notifications</span>
+                <label class="inline-flex relative items-center cursor-pointer">
+                    <input checked type="checkbox" value="" class="sr-only peer">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 
+                    peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer 
+                    dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white 
+                    after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white 
+                    after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all 
+                    dark:border-gray-600 peer-checked:bg-blue-600 peer-disabled:opacity-30"></div>
+                </label>
+            </div>
+            <nav class="w-full p-5 mt-auto items-center justify-center flex gap-10">
+                <button class="w-1/2 sm:w-44 py-2 px-5 border-[1px] border-apple-action bg-apple-action rounded-xl
+                hover:bg-white hover:text-apple-action duration-300" onclick="window.location.href = 'today.html'">
+                    Save
+                </button>
+                <button class="w-1/2 sm:w-44 py-2 px-5 border- border-[1px] border-red-700 rounded-xl text-red-700
+                hover:text-white hover:bg-red-700 duration-300">
+                    Delete
+                </button>
+            </nav>
+        </main>
+    </body>
+</html>
